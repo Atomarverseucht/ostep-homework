@@ -5,7 +5,7 @@
 # a forks c
 # a forks d
 # b forks e
-# b forks f
+# b forks ff
 # d forks g
 
 # to a process tree
