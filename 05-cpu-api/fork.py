@@ -9,12 +9,12 @@
 # d forks g
 
 # to a process tree
-#a --- b --- e
-#   |     |
-#   |     |- f
-#   |- c
-#   |
-#   |- d --- g
+# a --- b --- e
+# |     |
+# |     |- f
+# |- c
+# |
+# |- d --- g
 
 
 from __future__ import print_function
