@@ -1,0 +1,16 @@
+Q5: For what types of workloads and quantum lengths does SJF deliver the same response time as RR?
+    - one single job
+    - job lengths are ~same && quantum >= job length
+    - jobs are sorted by length && quantum >= max(job length)
+
+Q6: What happens to response time with SJF as job lengths increase?
+    - the response time will increase, because it is non-preemptive and is calculated by:
+        tResponse = (sum of job lengths, except the last one) / count of jobs
+
+Q7: What happens to response time with RR as quantum lengths increase? 
+    Can you write an equation that gives the worst-case response time given N-jobs
+        - under the case that q <= shortest job (classic RR), the response time will be for N -> infinity = q
+            (tResp = (N-1)*q / N = q - q/N)
+        - the worst case scenario is that q >= largest job, because in this case RR degenerates to FIFO, with
+            tResp = Sum(job lengths except last one) / N,
+            for N -> infinity and the last one is the smallest: tResp =~ Sum(job length) / N
