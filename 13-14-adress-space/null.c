@@ -8,9 +8,16 @@
 #include <sys/sysinfo.h>
 
 int main(int argc, char **argv) {
-    int* pointer = NULL;
-    int num = 5;
+    int* pointer = malloc(sizeof(int));
+    free(pointer);
+    int* data = malloc(sizeof(int)*10);
+    data[3] = 15;
+    data = realloc(data, sizeof(int)*100);
+    data[91] = 10;
+    printf("%d\n", data[3]);
+    free(data);
+    /*int num = 5;
     pointer = &num;
     
-    num = *pointer;
+    num = *pointer;*/
 }

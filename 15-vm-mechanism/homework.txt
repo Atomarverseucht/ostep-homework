@@ -1,0 +1,7 @@
+3. Run with these flags: -s 1 -n 10 -l 100. What is the maximum value that base can be set to, such that the adress space
+    still fits into physical memory in its entirety?
+        - the maximum base register value is 16284, because memSize = 16k -> 16 * 1024 = 16384 -> 16384 - 100 = 16284
+
+5. What fraction of randomly-generated virtual adresses are valid, as a function of the value of the bounds register?
+    Make a graph from running with different random seeds, with limit values ranging from 0 up to the maximum size of the address space.
+        - Valid Virtual addresses are from 1 to the limit (bounds) register 
