@@ -1,4 +1,3 @@
-
 # Overview
 
 In this homework, you'll be investigating swap performance with a simple
@@ -86,12 +85,8 @@ Then, the main loop begins:
 	x[i++] += 1; // main work of loop done here.
 ```
 
-
 The rest is just timing and printing out information. See `mem.c` for details.
 
 Much of the homework revolves around using the tool vmstat to monitor what is
 happening with the system. Read the vmstat man page (type `man vmstat`) for
 details on how it works, and what each column of output means.
-
-
-
