@@ -57,8 +57,9 @@ int countElements(element* active){
 }
 
 void freeTree(element* active){
-    if(active->child[0] != NULL) freeTree(active->child[0]);
-    if(active->child[1] != NULL) freeTree(active->child[1]);
+    if(active == NULL) return;
+    freeTree(active->child[0]);
+    freeTree(active->child[1]);
     free(active->lock);
     free(active->condition);
     free(active);
