@@ -10,10 +10,9 @@ typedef struct __node_t {
     pthread_mutex_t lock;
 } node_t;
 
-// Listenstruktur
 typedef struct __list_t {
     node_t *head;
-    pthread_mutex_t list_lock; // Schützt den Zugriff auf den Kopf der Liste
+    pthread_mutex_t list_lock;
 } list_t;
 
 void List_Init(list_t *L) {
@@ -40,7 +39,7 @@ int List_Lookup(list_t *L, int key) {
     pthread_mutex_lock(&L->list_lock);
     curr = L->head;
     if (curr) {
-        pthread_mutex_lock(&curr->lock); // Sperre den ersten Knoten
+        pthread_mutex_lock(&curr->lock);
     }
     pthread_mutex_unlock(&L->list_lock);
 

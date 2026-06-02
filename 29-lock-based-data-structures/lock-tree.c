@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 // Data-structure -> Tree
-typedef struct element_ {
+typedef struct element_t {
     int value;
-    struct element_* child[2];
+    struct element_t* child[2];
     pthread_mutex_t* lock;
     pthread_cond_t* condition;
     int used;
